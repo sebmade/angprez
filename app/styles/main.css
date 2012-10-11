@@ -1,0 +1,133 @@
+@import "fonts.css";
+
+body, .header, h1 {
+    margin: 0;
+}
+
+body {
+    padding: 0;
+}
+
+.center, .container {
+    text-align: center;
+}
+
+body {
+    font-family: 'ff-meta-serif-web-pro';
+    font-style: italic;
+}
+.logo {
+    float: right;
+}
+
+.title {
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.header {
+    padding: 10px 10px 50px 40px;
+    background-color: #ffffff;
+    background-image: -webkit-linear-gradient(top, #1f1e1c, #ffffff);
+    background-image: linear-gradient(top, #1f1e1c, #ffffff);
+    background-clip: border-box;
+}
+
+.slideNo {
+    padding: 25px 25px;
+    position: fixed;
+    float: right;
+    bottom: 0;
+    right: 0;
+}
+
+.title2 {
+    font-size: 4em;
+    margin: 20px;
+}
+
+.subtitle {
+    font-size: 3em;
+    margin: 20px;
+}
+
+.note {
+    font-size: 2em;
+    margin: 10px;
+}
+
+.container {
+    vertical-align: middle;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 600px;
+    min-width: 800px;
+    margin: 100px 100px 30px 100px;
+    position: fixed;
+}
+
+.right-triangle {
+    position: fixed;
+    bottom: 50%;
+    top: 50%;
+    right: 0;
+    float: right;
+    width: 0;
+    height: 0;
+    border-left: 40px solid #d9d9d9;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+
+.right-triangle:hover {
+    border-left: 40px solid #8c8c8c;
+}
+.left-triangle {
+    position: fixed;
+    bottom: 50%;
+    top: 50%;
+    left: 0;
+    float: left;
+    width: 0;
+    height: 0;
+    border-right: 40px solid #d9d9d9;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+
+.left-triangle:hover {
+    border-right: 40px solid #8c8c8c;
+}
+
+.social-media {
+    display: inline-block;
+    vertical-align: middle ;
+    font-family: 'SocialMediaFont';
+    width: 20px;
+    opacity: 1;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    padding: 7px 8px 5px 3px;
+    opacity: 0.6;
+}
+.social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 0;
+}
+.rss-icon {
+    background-color: #FF9600;
+}
+.twitter-icon {
+    background-color: #45B0E3;
+}
+.gplus-icon {
+    background-color: #B33022;
+}
+
+.social-icons {
+}
