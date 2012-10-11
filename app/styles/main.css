@@ -113,6 +113,9 @@ body {
     padding: 7px 8px 5px 3px;
     opacity: 0.6;
 }
+.red {
+    color: red;
+}
 .social-media a {
     color: white;
     text-decoration: none;
