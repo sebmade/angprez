@@ -12,26 +12,14 @@
         <link rel="stylesheet" href="styles/main.css"/>
 
     </head>
-    <body ng-app="angprezApp" ng-controller="MainCtrl">
+    <body ng-app="angprezApp">
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="slide">
-            <a ng-click="previousSlide()">
-                <div class="left-triangle"></div>
-            </a>
-            <div ng-include="currentSlide()"></div>
-            <a ng-click="nextSlide()">
-                <div class="right-triangle"></div>
-            </a>
-            <span class="slideNo">
-                <span>{{slideIndex+1}}</span> / <span>6</span>
-            </span>
-        </div>
-
+        <div ng-view></div>
         <script src="components/jquery/jquery.js" type="text/javascript"></script>
         <script src="scripts/vendor/angular.js"></script>
 

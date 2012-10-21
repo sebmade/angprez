@@ -4,11 +4,11 @@
 var angprezApp = angular.module('angprezApp', [])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/:index', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/0'
       });
   }]);

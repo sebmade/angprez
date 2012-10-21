@@ -1,9 +1,12 @@
-<div class="hero-unit">
-  <h1>Cheerio!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<div class="slide">
+    <a ng-click="previousSlide()">
+        <div class="left-triangle"></div>
+    </a>
+    <div ng-include="currentSlide()"></div>
+    <a ng-click="nextSlide()">
+        <div class="right-triangle"></div>
+    </a>
+            <span class="slideNo">
+                <span>{{slideIndex+1}}</span> / <span>6</span>
+            </span>
 </div>
