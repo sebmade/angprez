@@ -6,4 +6,10 @@ angprezApp.controller('MainCtrl', function($scope, $http, $log) {
   }).error(function(data) {
       $log.error("unable to retrieve slides : "+data);
     })
+  $scope.addSlide = function(t, c) {
+    $scope.slides.push({
+      title : t,
+      content : c
+    });
+  }
 });

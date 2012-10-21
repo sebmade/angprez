@@ -12,6 +12,9 @@ angprezApp.directive('slider', function($document) {
       $scope.previousSlide = function() {
         $scope.slideIndex--;
       };
+      $scope.isFile = function() {
+        return ($scope.slides[$scope.slideIndex].content.indexOf(".html") != -1);
+      };
       $scope.currentSlide = function() {
         return $scope.slides[$scope.slideIndex].content;
       }

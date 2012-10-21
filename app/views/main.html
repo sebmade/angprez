@@ -7,7 +7,8 @@
 
         <h1 class="title">{{slides[slideIndex].title}}</h1>
     </div>
-    <div ng-include="currentSlide()"></div>
+    <div ng-include="currentSlide()" ng-show="isFile()"></div>
+    <div class="container" ng-bind-html-unsafe="currentSlide()" ng-hide="isFile()"></div>
     <a ng-click="nextSlide()">
         <div class="right-triangle"></div>
     </a>
