@@ -1,4 +1,5 @@
 'use strict';
 
-angprezApp.controller('MainCtrl', function($scope, $document, $routeParams, $location) {
+angprezApp.controller('MainCtrl', function($scope, $http) {
+
 });
