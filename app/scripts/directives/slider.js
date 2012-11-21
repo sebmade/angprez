@@ -17,7 +17,7 @@ angprezApp.directive('slider', function($document) {
       };
       $scope.currentSlide = function() {
         return $scope.slides[$scope.slideIndex].content;
-      }
+      };
       $document.keydown(function(event) {
         if (event.keyCode == 37) {
           $scope.previousSlide();
