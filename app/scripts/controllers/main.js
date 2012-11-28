@@ -1,6 +1,9 @@
 'use strict';
 
+var documentKeyDown = false;
+
 angprezApp.controller('MainCtrl', function($scope, $document, $routeParams, $location) {
+  console.log("create MainCtrl");
   $scope.slideIndex = parseInt($routeParams.index);
   $scope.nextSlide = function() {
     $scope.slideIndex++;
@@ -13,13 +16,16 @@ angprezApp.controller('MainCtrl', function($scope, $document, $routeParams, $loc
   $scope.currentSlide = function() {
     return "slide"+$scope.slideIndex+".html";
   }
-  $document.keydown(function(event) {
-    if (event.keyCode == 37) {
-      $scope.previousSlide();
-      $scope.$apply();
-    } else if (event.keyCode == 39) {
-      $scope.nextSlide();
-      $scope.$apply();
-    }
-  });
+  if (!documentKeyDown) {
+    $document.keydown(function(event) {
+      if (event.keyCode == 37) {
+        $scope.previousSlide();
+        $scope.$apply();
+      } else if (event.keyCode == 39) {
+        $scope.nextSlide();
+        $scope.$apply();
+      }
+    });
+    documentKeyDown = true;
+  }
 });
