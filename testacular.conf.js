@@ -9,11 +9,11 @@ basePath = '';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
+  'components/jquery/jquery.js',
   'app/scripts/vendor/angular.js',
   'test/lib/angular-mocks.js',
   'app/scripts/*.js',
   'app/scripts/**/*.js',
-  'test/mock/**/*.js',
   'test/spec/**/*.js'
 ];
 
@@ -47,7 +47,7 @@ logLevel = LOG_INFO;
 
 
 // enable / disable watching file and executing tests whenever any file changes
-autoWatch = false;
+autoWatch = true;
 
 
 // Start these browsers, currently available:
