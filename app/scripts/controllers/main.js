@@ -10,17 +10,21 @@ angprezApp.controller('MainCtrl', function($scope, $document, $http, $log) {
   $scope.slideIndex = 0;
   $scope.nextSlide = function() {
     $scope.slideIndex++;
-    $location.path("/"+$scope.slideIndex);
   };
   $scope.previousSlide = function() {
     $scope.slideIndex--;
-    $location.path("/"+$scope.slideIndex);
   };
   $scope.currentSlide = function() {
-    return $scope.slides[$scope.slideIndex].content;
+    if ($scope.slides[$scope.slideIndex]) {
+      return $scope.slides[$scope.slideIndex].content;
+    }
+    return null;
   };
   $scope.isFile = function() {
-    return $scope.currentSlide().indexOf(".html") != -1;
+    if ($scope.currentSlide()) {
+      return $scope.currentSlide().indexOf(".html") != -1;
+    }
+    return false;
   };
   $scope.addSlide = function(t, c) {
     $scope.slides.push({
