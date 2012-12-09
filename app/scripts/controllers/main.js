@@ -10,11 +10,9 @@ angprezApp.controller('MainCtrl', function($scope, $document, $http, $log) {
   $scope.slideIndex = 0;
   $scope.nextSlide = function() {
     $scope.slideIndex++;
-    $location.path("/"+$scope.slideIndex);
   };
   $scope.previousSlide = function() {
     $scope.slideIndex--;
-    $location.path("/"+$scope.slideIndex);
   };
   $scope.currentSlide = function() {
     return $scope.slides[$scope.slideIndex].content;
