@@ -1,6 +1,12 @@
 'use strict';
 
-angprezApp.controller('MainCtrl', function ($scope, $document) {
+angprezApp.controller('MainCtrl', function($scope, $document, $http, $log) {
+  $scope.slides = [];
+  $http.get("/data/slides.json").success(function(data) {
+    $scope.slides = data;
+  }).error(function(data) {
+      $log.error("unable to retrieve slides : "+data);
+    });
   $scope.slideIndex = 0;
   $scope.nextSlide = function () {
     $scope.slideIndex++;
