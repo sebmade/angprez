@@ -15,7 +15,10 @@ angprezApp.controller('MainCtrl', function($scope, $document, $http, $log) {
     $scope.slideIndex--;
   };
   $scope.currentSlide = function() {
-    return $scope.slides[$scope.slideIndex].content;
+    if ($scope.slides[$scope.slideIndex]) {
+      return $scope.slides[$scope.slideIndex].content;
+    }
+    return null;
   };
   $document.keydown(function(event) {
     if (event.keyCode == 37) {
