@@ -11,7 +11,7 @@ angular.module("views/main.html", []).run(function($templateCache) {
     "    </div>" +
     "    <div ng-include=\"currentSlide()\" ng-show=\"isFile()\"></div>" +
     "    <div class=\"container\" ng-bind-html-unsafe=\"currentSlide()\" ng-hide=\"isFile()\"></div>" +
-    "    <a ng-click=\"nextSlide()\">" +
+    "    <a id=\"next\" ng-click=\"nextSlide()\">" +
     "        <div class=\"right-triangle\"></div>" +
     "    </a>" +
     "            <span class=\"slideNo\">" +
