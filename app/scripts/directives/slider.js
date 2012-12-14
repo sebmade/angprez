@@ -1,6 +1,6 @@
 'use strict';
 
-angprezApp.directive('slider', function($document) {
+angprezApp.directive('slider', function() {
   return {
     templateUrl: 'views/main.html',
     restrict: 'E',

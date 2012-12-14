@@ -3,13 +3,20 @@
 describe('Directive: slider', function() {
   beforeEach(module('angprezApp'));
 
-  var element;
-
   beforeEach(module('views/main.html'));
 
-  it('should make hidden element visible', inject(function($rootScope, $compile) {
-    element = angular.element('<slider></slider>');
+  var element;
+
+  beforeEach(inject(function($rootScope, $compile, $httpBackend) {
+    $httpBackend.when("GET", "/data/slides.json").respond([{title: "test", content: "slide0.html"}]);
+    $httpBackend.when("GET", "slide0.html").respond("<div></div>");
+    element = angular.element('<slider slides="/data/slides.json"></slider>');
     element = $compile(element)($rootScope);
-    expect(element.text()).toBe('');
+    $rootScope.$digest();
+    $httpBackend.flush();
   }));
+
+  it('should show title', function() {
+    expect(element.find('div div img').attr("src")).toBe('images/AngularJS-Shield-small.png');
+  });
 });
