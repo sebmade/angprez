@@ -32,8 +32,8 @@ angprezApp.controller('MainCtrl', function($scope, $document, $http, $log, $attr
       content : c
     });
   };
-  $scope.gotoSlide = function(i) {
-    $scope.slideIndex = i;
+  $scope.gotoSlide = function(s) {
+    $scope.slideIndex = $scope.slides.indexOf(s);
   };
   $document.keydown(function(event) {
     if (event.keyCode == 37) {

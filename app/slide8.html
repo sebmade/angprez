@@ -2,7 +2,7 @@
     <input class="note" ng-model="query.title">
     <br>
     <span class="note" ng-repeat="s in slides | filter:query">
-      <a ng-click="gotoSlide($index)">{{s.title}}</a>
+      <a ng-click="gotoSlide(s)">{{s.title}}</a>
       <br>
     </span>
 </div>
