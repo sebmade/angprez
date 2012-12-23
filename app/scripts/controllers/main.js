@@ -32,6 +32,9 @@ angprezApp.controller('MainCtrl', function($scope, $document, $http, $log, $attr
       content : c
     });
   };
+  $scope.gotoSlide = function(i) {
+    $scope.slideIndex = i;
+  };
   $document.keydown(function(event) {
     if (event.keyCode == 37) {
       $scope.previousSlide();
