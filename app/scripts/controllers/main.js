@@ -20,6 +20,9 @@ angprezApp.controller('MainCtrl', function($scope, $document, $http, $log, $attr
     }
     return null;
   };
+  $scope.gotoSlide = function(s) {
+    $scope.slideIndex = $scope.slides.indexOf(s);
+  };
   $scope.isFile = function() {
     if ($scope.currentSlide()) {
       return $scope.currentSlide().indexOf(".html") != -1;
