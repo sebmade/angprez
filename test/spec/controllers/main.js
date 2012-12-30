@@ -13,8 +13,7 @@ describe('Controller: MainCtrl', function() {
     scope = {};
     $httpBackend.when("GET", "/data/slides.json").respond([{title: "test", content: "slide0.html"}]);
     MainCtrl = $controller('MainCtrl', {
-      $scope: scope,
-      $attrs: {slides: "/data/slides.json"}
+      $scope: scope
     });
     $httpBackend.flush();
   }));
