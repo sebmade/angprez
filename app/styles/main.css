@@ -134,3 +134,7 @@ body {
 
 .social-icons {
 }
+
+input.ng-invalid-maxlength {
+    border: 3px solid red;
+}
