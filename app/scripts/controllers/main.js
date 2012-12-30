@@ -1,8 +1,8 @@
 'use strict';
 
-angprezApp.controller('MainCtrl', function($scope, $document, $http, $log, $attrs) {
+angprezApp.controller('MainCtrl', function($scope, $document, $http, $log) {
   $scope.slides = [];
-  $http.get($attrs.slides).success(function(data) {
+  $http.get("/data/slides.json").success(function(data) {
     $scope.slides = data;
   }).error(function(data) {
     $log.error("unable to retrieve slides : "+data);
@@ -19,18 +19,6 @@ angprezApp.controller('MainCtrl', function($scope, $document, $http, $log, $attr
       return $scope.slides[$scope.slideIndex].content;
     }
     return null;
-  };
-  $scope.isFile = function() {
-    if ($scope.currentSlide()) {
-      return $scope.currentSlide().indexOf(".html") != -1;
-    }
-    return false;
-  };
-  $scope.addSlide = function(t, c) {
-    $scope.slides.push({
-      title : t,
-      content : c
-    });
   };
   $scope.gotoSlide = function(s) {
     $scope.slideIndex = $scope.slides.indexOf(s);
