@@ -1,6 +1,7 @@
 <form name="slideForm" class="container">
     <h1 class="subtitle">Ajouter une slide</h1>
-    <h1 class="subtitle">Titre : </h1><input class="subtitle" name="title" type="text" ng-model="title"/>
-    <h1 class="subtitle">Contenu : </h1><textarea class="subtitle" ng-model="content"/>
-    <button class="subtitle" ng-click="addSlide(title,content)">ajouter</button>
+    <h1 class="subtitle">Titre : </h1><input class="subtitle" name="title" type="text" ng-model="title" required ng-maxlength="10"/>
+    <div ng-show="slideForm.title.$error.maxlength">Le titre ne peut dépasser 10 caractères !</div>
+    <h1 class="subtitle">Contenu : </h1><textarea class="subtitle" ng-model="content" required/>
+    <button class="subtitle" ng-click="addSlide(title,content)" ng-disabled="slideForm.$invalid">ajouter</button>
 </form>
